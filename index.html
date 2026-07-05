@@ -94,14 +94,29 @@ nav:not(.solid) .burger span{background:#fff}
 .hero-in{position:relative;z-index:2;max-width:920px}
 .hero-tag{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:30px;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(6px);color:#BFF4E4}
 #hero h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:900;letter-spacing:-.03em}
-#hero h1 .acc{background:linear-gradient(100deg,#8FE6CC,#7AB800);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#hero h1 .acc{background:linear-gradient(100deg,#8FE6CC,#7AB800,#FECB00,#8FE6CC);background-size:250% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 9s linear infinite}
+@keyframes shine{to{background-position:250% center}}
 #hero p.sub{font-size:clamp(1.02rem,1.7vw,1.28rem);color:rgba(255,255,255,.84);max-width:700px;margin-top:24px;font-weight:300}
 #hero p.sub b{font-weight:500;color:#BFF4E4}
 .hero-cta{display:inline-flex;align-items:center;gap:12px;margin-top:40px;background:linear-gradient(100deg,var(--alfa),#00b489);color:#fff;text-decoration:none;font-weight:700;font-size:.98rem;padding:16px 30px;border-radius:40px;box-shadow:0 16px 40px -14px rgba(0,155,118,.7);transition:.3s;border:1px solid rgba(255,255,255,.18)}
 .hero-cta:hover{transform:translateY(-3px)}
 .hero-cta .ar{transition:.3s}.hero-cta:hover .ar{transform:translateX(5px)}
 .hero-axes{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.hero-axes span{font-size:.76rem;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.75);border:1px solid rgba(143,230,204,.3);border-radius:30px;padding:7px 15px;background:rgba(255,255,255,.05)}
+.hero-axes span{display:inline-flex;align-items:center;gap:9px;font-size:.76rem;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.78);border:1px solid rgba(143,230,204,.3);border-radius:30px;padding:8px 16px;background:rgba(255,255,255,.05);transition:.25s;backdrop-filter:blur(4px)}
+.hero-axes span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--limon);box-shadow:0 0 8px rgba(122,184,0,.8);flex:0 0 auto}
+.hero-axes span:hover{border-color:#8FE6CC;background:rgba(0,155,118,.16);color:#fff;transform:translateY(-2px)}
+.hero-rings{position:absolute;top:50%;right:-180px;transform:translateY(-50%);width:840px;height:840px;z-index:0;pointer-events:none}
+.hero-rings i{position:absolute;border-radius:50%;border:1px solid rgba(143,230,204,.16)}
+.hero-rings i:nth-child(1){inset:210px;animation:ringspin 26s linear infinite}
+.hero-rings i:nth-child(2){inset:105px;border-color:rgba(143,230,204,.11);animation:ringspin 46s linear infinite reverse}
+.hero-rings i:nth-child(3){inset:0;border-color:rgba(143,230,204,.07);animation:ringspin 72s linear infinite}
+.hero-rings i::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;border-radius:50%;background:var(--limon);box-shadow:0 0 12px rgba(122,184,0,.8)}
+.hero-rings i:nth-child(2)::after{background:#8FE6CC;box-shadow:0 0 12px rgba(143,230,204,.8)}
+.hero-rings i:nth-child(3)::after{background:var(--amarillo);box-shadow:0 0 12px rgba(254,203,0,.7)}
+@keyframes ringspin{to{transform:rotate(360deg)}}
+.scue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;width:25px;height:40px;border:2px solid rgba(143,230,204,.45);border-radius:15px;display:flex;justify-content:center}
+.scue i{width:4px;height:8px;border-radius:3px;background:#8FE6CC;margin-top:7px;animation:scw 1.9s ease-in-out infinite}
+@keyframes scw{0%,100%{transform:translateY(0);opacity:1}55%{transform:translateY(11px);opacity:.15}}
 .hero-foot{position:absolute;bottom:30px;left:0;right:0;z-index:2}
 .hero-foot .wrap{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 
@@ -280,6 +295,10 @@ nav:not(.solid) .burger span{background:#fff}
 .tactics li{list-style:none;font-size:.86rem;color:var(--texto);display:flex;gap:11px;align-items:flex-start;line-height:1.45;padding:8px 12px;border-radius:11px;transition:.22s}
 .tactics li:hover{background:rgba(0,155,118,.06)}
 .tactics li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--alfa);margin-top:7px;flex:0 0 auto}
+.tics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.tic{display:flex;align-items:center;gap:11px;background:#F7FAF9;border:1px solid var(--line);border-radius:13px;padding:12px 14px;font-size:.83rem;color:var(--texto);line-height:1.35;transition:.25s}
+.tic:hover{border-color:rgba(0,155,118,.45);background:rgba(0,155,118,.06);transform:translateY(-2px)}
+.tic svg{width:19px;height:19px;flex:0 0 auto;stroke:var(--alfa);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .fnote{margin-top:18px;font-size:.8rem;color:var(--muted);line-height:1.55;max-width:860px}
 .fnote b{color:var(--morado)}
 sup.ast{color:var(--morado);font-weight:900}
@@ -320,8 +339,9 @@ sup.ast{color:var(--morado);font-weight:900}
 .mx-fronts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1120px;margin:0 auto 44px}
 .mxf{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm);transition:.3s;position:relative;overflow:hidden}
 .mxf:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.mxf .pct{font-size:3.1rem;font-weight:900;line-height:1;color:var(--mx-c,var(--alfa));display:flex;align-items:baseline;gap:3px;white-space:nowrap}
-.mxf .pct small{font-size:1.55rem;font-weight:800}
+.mxf .pct{font-size:3.4rem;font-weight:900;line-height:1;color:var(--mx-c,var(--alfa));display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+.mxf .pct span{font-size:inherit;font-weight:inherit;color:inherit;display:inline;line-height:1}
+.mxf .pct small{font-size:1.5rem;font-weight:800}
 .mxf b{display:block;font-size:.86rem;color:var(--azul);margin:8px 0 4px;line-height:1.25}
 .mxf span{font-size:.74rem;color:var(--muted);display:block}
 .mxf .mbar{height:5px;border-radius:4px;background:var(--line);margin-top:14px;overflow:hidden}
@@ -362,6 +382,7 @@ sup.ast{color:var(--morado);font-weight:900}
 .jg:hover{border-color:rgba(0,155,118,.4)}
 .jg .jc{font-size:.68rem;font-weight:800;color:#fff;background:var(--verde-osc);border-radius:8px;padding:4px 9px;flex:0 0 auto}
 .jg p{font-size:.83rem;color:var(--texto);flex:1;line-height:1.45;margin:0}
+.jg .jpv{font-size:.8rem;font-weight:900;color:var(--verde-osc);background:rgba(0,155,118,.11);border-radius:12px;padding:4px 12px;white-space:nowrap;flex:0 0 auto}
 .jg .jp{font-size:.68rem;font-weight:700;color:var(--morado);background:rgba(107,31,124,.08);border-radius:12px;padding:4px 11px;white-space:nowrap;flex:0 0 auto}
 .mx-fr4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .mxd{border-radius:12px;padding:13px 15px;font-size:.76rem;line-height:1.45;border:1px solid var(--line);background:#FAFCFB}
@@ -381,7 +402,7 @@ sup.ast{color:var(--morado);font-weight:900}
 .mxn .ni svg{width:19px;height:19px;stroke:var(--alfa);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .mxn p{font-size:.82rem;color:var(--muted);line-height:1.5}
 .mxn p b{color:var(--azul)}
-.mx-legend{max-width:1120px;margin:20px auto 0;display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.mx-legend{max-width:1120px;margin:0 auto 16px;display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-start}
 .mx-legend span{font-size:.72rem;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:7px}
 .mx-legend i{width:13px;height:13px;border-radius:4px}
 
@@ -473,6 +494,8 @@ sup.ast{color:var(--morado);font-weight:900}
   .navlinks a{font-size:.7rem;padding:7px 6px}
 }
 @media(max-width:1024px){
+  .hero-rings{right:-320px;opacity:.6}
+  .tics{grid-template-columns:repeat(2,1fr)}
   .stair-grid{grid-template-columns:repeat(2,1fr)}
   .amb.p1,.amb.p2,.amb.p3,.amb.p4{margin-top:0}
   .mdims{grid-template-columns:repeat(2,1fr)}
@@ -499,6 +522,8 @@ sup.ast{color:var(--morado);font-weight:900}
   .darr{flex:0 0 26px;width:100%}
   .darr::before{left:50%;right:auto;top:3px;bottom:3px;width:2px;height:auto;transform:translateX(-50%)}
   .darr::after{right:auto;left:50%;top:auto;bottom:1px;transform:translateX(-50%) rotate(135deg)}
+  .hero-rings{display:none}
+  .tics{grid-template-columns:1fr}
   .eco2{grid-template-columns:1fr;gap:22px}
   .eco-conn{display:none}
   .eco-cli{max-width:190px}
@@ -566,7 +591,7 @@ sup.ast{color:var(--morado);font-weight:900}
 
 <!-- 1 · HERO -->
 <section id="hero">
-  <canvas id="heroCanvas"></canvas><div class="hero-grid"></div><div class="hero-glow"></div>
+  <canvas id="heroCanvas"></canvas><div class="hero-grid"></div><div class="hero-glow"></div><div class="hero-rings" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero-in">
     <div class="hero-tag">Estrategia Corporativa</div>
     <h1>Estrategia de Gerencia de <span class="acc">Propuesta de Valor</span></h1>
@@ -574,6 +599,7 @@ sup.ast{color:var(--morado);font-weight:900}
     <div class="hero-axes"><span>Visión de cliente</span><span>Bancaseguros</span><span>Datos e IA</span><span>Crecimiento medible</span></div>
     <a href="#oportunidad" class="hero-cta">Explorar estrategia <span class="ar">→</span></a>
   </div>
+  <div class="scue" aria-hidden="true"><i></i></div>
   <div class="hero-foot"><div class="wrap">Gerencia de Propuesta de Valor · Confidencial</div></div>
 </section>
 
@@ -732,33 +758,31 @@ sup.ast{color:var(--morado);font-weight:900}
     </div>
     <div class="frentes-grid">
       <div class="frente span2 t-green reveal d1">
-        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><div><div class="frole">Frente estratégico</div><h3>Oferta de Valor</h3></div></div><div class="fghost">01</div>
-        <div class="fdesc">Diseña, articula y activa propuestas diferenciadas por segmento, canal y momento de vida. Integra iniciativas de bancaseguros, conservación y migración a voluntarios, y acompaña el desarrollo de soluciones de seguros embebidos y obligatorios.</div>
-        <ul class="tactics">
-          <li>Diseño de ofertas diferenciadas por segmento, canal y momento de vida.</li>
-          <li>Bancaseguros: profundización, cross-sell y activación comercial por banco.</li>
-          <li>Conservación y recuperación de clientes con riesgo de fuga.</li>
-          <li>Migración de clientes de productos obligatorios hacia seguros voluntarios.</li>
-          <li>Desarrollo de propuestas affinity y soluciones para aliados estratégicos.</li>
-          <li>Construcción de seguros embebidos.</li>
-          <li>MVPs y pilotos para validar nuevas ofertas.</li>
-          <li>Optimización de oferta, experiencia y comunicación según desempeño comercial.</li>
-        </ul>
+        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 5-8 5-8-5z"/><path d="M4 12l8 5 8-5"/><path d="M4 17l8 5 8-5"/></svg></div><div><div class="frole">Frente estratégico</div><h3>Oferta de Valor</h3></div></div><div class="fghost">01</div>
+        <div class="fdesc">Diseña, articula y activa propuestas diferenciadas por segmento, canal y momento de vida — de bancaseguros y voluntarios a affinity y embebidos.</div>
+        <div class="tics">
+          <div class="tic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Ofertas por segmento, canal y momento de vida</div>
+          <div class="tic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-5h6v5"/></svg>Bancaseguros: profundización y cross-sell por banco</div>
+          <div class="tic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/></svg>Conservación y recuperación de clientes</div>
+          <div class="tic"><svg viewBox="0 0 24 24"><path d="M4 7h12M13 4l3 3-3 3M20 17H8M11 14l-3 3 3 3"/></svg>Migración de obligatorios a voluntarios</div>
+          <div class="tic"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 1 0-6l2-2a4 4 0 0 1 6 6l-1 1"/><path d="M14 10a4 4 0 0 1 0 6l-2 2a4 4 0 0 1-6-6l1-1"/></svg>Affinity, aliados y seguros embebidos</div>
+          <div class="tic"><svg viewBox="0 0 24 24"><path d="M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 3h8"/></svg>MVPs, pilotos y optimización continua</div>
+        </div>
       </div>
       <div class="frente t-blue reveal d2">
-        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><path d="M5 18c0-5 4-8 7-8s7 3 7 8M9 9a3 3 0 1 1 6 0"/></svg></div><div><div class="frole">Frente de experiencia</div><h3>Experiencia de Cliente</h3></div></div><div class="fghost">02</div>
-        <div class="fdesc">Diseña, prioriza y mejora los momentos críticos del journey, identificando fricciones y articulando con operación, tecnología y canales soluciones que hagan la experiencia más simple, consistente y omnicanal.</div>
-        <div class="ftags"><i>Journeys</i><i>Fricciones</i><i>Postventa</i><i>Retención</i><i>Omnicanalidad</i><i>Voz del cliente</i></div>
+        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div><div><div class="frole">Frente de experiencia</div><h3>Experiencia de Cliente</h3></div></div><div class="fghost">02</div>
+        <div class="fdesc">Prioriza y mejora los momentos críticos del journey para una experiencia simple, consistente y omnicanal.</div>
+        <div class="ftags"><i>Journeys</i><i>Fricciones</i><i>Postventa</i><i>Retención</i><i>Omnicanalidad</i></div>
       </div>
       <div class="frente t-amber reveal d3">
         <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><path d="M3 11l14-5v12L3 13v-2z"/><path d="M17 8a4 4 0 0 1 0 8M7 13v5a2 2 0 0 0 4 0v-4"/></svg></div><div><div class="frole">Frente de activación</div><h3>Mercadeo Estratégico &amp; Activos Digitales</h3></div></div><div class="fghost">03</div>
-        <div class="fdesc">Posiciona, comunica y activa la oferta para acompañar el crecimiento del negocio, fortaleciendo la conversión, educación, autoservicio y presencia digital a través de campañas, canales, SEO, GEO e IA conversacional.</div>
-        <div class="ftags"><i>Campañas</i><i>Conversión</i><i>Educación</i><i>Autoservicio</i><i>SEO / GEO</i><i>IA conversacional</i></div>
+        <div class="fdesc">Posiciona y activa la oferta para el crecimiento del negocio: conversión, educación, autoservicio y presencia digital.</div>
+        <div class="ftags"><i>Campañas</i><i>Conversión</i><i>SEO / GEO</i><i>IA conversacional</i></div>
       </div>
       <div class="frente span2 t-purple reveal d4">
-        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg></div><div><div class="frole">Frente habilitador · transversal</div><h3>Visión Cliente &amp; Martech<sup class="ast">*</sup></h3></div></div><div class="fghost">04</div>
-        <div class="fdesc">Integra, segmenta y activa la información del cliente para personalizar journeys, automatizar comunicaciones y medir impacto; habilitando inteligencia accionable que impulsa el crecimiento y fortalece todos los frentes de la estrategia.</div>
-        <div class="ftags"><i>Vista 360</i><i>Segmentación</i><i>Personalización</i><i>Automatización</i><i>Propensión</i><i>CRM</i><i>Medición de impacto</i></div>
+        <div class="fr-head"><div class="fr-ic"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 11l10-4M7 13l10 4"/></svg></div><div><div class="frole">Frente habilitador · transversal</div><h3>Visión Cliente &amp; Martech<sup class="ast">*</sup></h3></div></div><div class="fghost">04</div>
+        <div class="fdesc">Convierte los datos del cliente en personalización, automatización y medición de impacto que fortalecen todos los frentes.</div>
+        <div class="ftags"><i>Vista 360</i><i>Segmentación</i><i>Automatización</i><i>Propensión</i><i>Medición de impacto</i></div>
       </div>
     </div>
     <p class="fnote reveal d5"><b>* Martech:</b> tecnología aplicada al mercadeo — plataformas de datos, CRM y automatización que permiten segmentar, personalizar, activar y medir la relación con cada cliente.</p>
@@ -831,12 +855,18 @@ sup.ast{color:var(--morado);font-weight:900}
     </div>
     <div class="mx-title reveal">Peso por frente</div>
     <div class="mx-fronts">
-      <div class="mxf c1 reveal d1" style="--w:35%"><div class="pct"><span data-count="35">0</span><small>%</small></div><b>Oferta de Valor</b><span>Diseño y activación de ofertas, bancaseguros y embebidos</span><div class="mbar"><i></i></div></div>
-      <div class="mxf c4 reveal d2" style="--w:30%"><div class="pct"><span data-count="30">0</span><small>%</small></div><b>Visión Cliente &amp; Martech</b><span>Segmentación, automatización, propensión, venta al stock y medición</span><div class="mbar"><i></i></div></div>
+      <div class="mxf c1 reveal d1" style="--w:33%"><div class="pct"><span data-count="33">0</span><small>%</small></div><b>Oferta de Valor</b><span>Diseño y activación de ofertas, bancaseguros y embebidos</span><div class="mbar"><i></i></div></div>
+      <div class="mxf c4 reveal d2" style="--w:32%"><div class="pct"><span data-count="32">0</span><small>%</small></div><b>Visión Cliente &amp; Martech</b><span>Segmentación, automatización, propensión, venta al stock y medición</span><div class="mbar"><i></i></div></div>
       <div class="mxf c2 reveal d3" style="--w:20%"><div class="pct"><span data-count="20">0</span><small>%</small></div><b>Experiencia de Cliente</b><span>Fricciones, postventa, retención y omnicanalidad</span><div class="mbar"><i></i></div></div>
       <div class="mxf c3 reveal d4" style="--w:15%"><div class="pct"><span data-count="15">0</span><small>%</small></div><b>Mercadeo Estratégico &amp; Activos Digitales</b><span>Activación, conversión, educación y presencia digital</span><div class="mbar"><i></i></div></div>
     </div>
     <div class="mx-title reveal">Peso por pilar estratégico · pulsa cada pilar para ver la contribución por frente</div>
+    <div class="mx-legend reveal">
+      <span><i style="background:#005D55"></i>Oferta de Valor</span>
+      <span><i style="background:#009B76"></i>Visión Cliente &amp; Martech</span>
+      <span><i style="background:#57BFA0"></i>Experiencia de Cliente</span>
+      <span><i style="background:#A8DCCB"></i>Mercadeo Estratégico &amp; Activos Digitales</span>
+    </div>
     <div class="mx-rows">
       <div class="mxrow reveal d1" data-mx>
         <div class="mx-main">
@@ -846,12 +876,12 @@ sup.ast{color:var(--morado);font-weight:900}
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
-            <div class="jg"><span class="jc">1.1</span><p>Impulsar prima media y venta al stock</p><span class="jp">25% util. neta 2030</span></div>
-            <div class="jg"><span class="jc">1.2</span><p>Potenciar retención y experiencia postventa</p><span class="jp">10% util. neta 2030</span></div>
-            <div class="jg"><span class="jc">1.3</span><p>Desarrollar oferta Salud, Auto, Vida Ahorro y PyMEs</p><span class="jp">10% util. neta 2030</span></div>
-            <div class="jg"><span class="jc">1.4</span><p>Fortalecer la oferta y modelo operativo de deudor</p><span class="jp">25% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">1.1</span><p>Impulsar prima media y venta al stock</p><span class="jpv">22%</span><span class="jp">25% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">1.2</span><p>Potenciar retención y experiencia postventa</p><span class="jpv">14%</span><span class="jp">10% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">1.3</span><p>Desarrollar oferta Salud, Auto, Vida Ahorro y PyMEs</p><span class="jpv">9%</span><span class="jp">10% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">1.4</span><p>Fortalecer la oferta y modelo operativo de deudor</p><span class="jpv">10%</span><span class="jp">25% util. neta 2030</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
@@ -865,21 +895,21 @@ sup.ast{color:var(--morado);font-weight:900}
       <div class="mxrow reveal d2" data-mx>
         <div class="mx-main">
           <div class="pn"><small>Pilar 2</small>Impulsar la gestión del bienestar — Vida y Salud</div>
-          <div class="pw"><span data-count="7">0</span><small>%</small></div>
-          <div class="mxbar"><i class="sOV" style="--w:55.6%" data-tip="Oferta de Valor · 5%"></i><i class="sEX" style="--w:22.2%" data-tip="Experiencia de Cliente · 2%"></i><i class="sMK" style="--w:22.2%" data-tip="Mercadeo Estratégico · 2%"></i></div>
+          <div class="pw"><span data-count="5">0</span><small>%</small></div>
+          <div class="mxbar"><i class="sOV" style="--w:100%" data-tip="Oferta de Valor · 3%"></i></div>
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
-            <div class="jg"><span class="jc">2.1</span><p>Desarrollar estrategia y oferta de vida individual y vida con ahorro (Fase 1: Grupo)</p><span class="jp">5% util. neta 2030</span></div>
-            <div class="jg"><span class="jc">2.2</span><p>Desarrollar estrategia y oferta de salud (Fase 1: Grupo)</p><span class="jp">5% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">2.1</span><p>Desarrollar estrategia y oferta de vida individual y vida con ahorro (Fase 1: Grupo)</p><span class="jpv">3%</span><span class="jp">5% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">2.2</span><p>Desarrollar estrategia y oferta de salud (Fase 1: Grupo)</p><span class="jpv">2%</span><span class="jp">5% util. neta 2030</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
-            <div class="mxd"><span class="lvl lead">Lidera · 5%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Estrategia y diseño de las ofertas de vida, ahorro y salud.</span></div>
-            <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Journeys de uso y activación de beneficios de bienestar.</span></div>
-            <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Educación, contenidos y comunicación de valor en bienestar.</span></div>
+            <div class="mxd"><span class="lvl lead">Lidera · 3%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Estrategia y diseño de las ofertas de vida, ahorro y salud.</span></div>
+            <div class="mxd"><span class="lvl acc-l">Sin peso en esta fase</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Se activa en fases posteriores del despliegue de bienestar.</span></div>
+            <div class="mxd"><span class="lvl acc-l">Sin peso en esta fase</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Se activa en fases posteriores del despliegue de bienestar.</span></div>
             <div class="mxd"><span class="lvl acc-l">Sin peso en esta fase</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>Se activa en fases posteriores de personalización y medición.</span></div>
           </div>
         </div></div>
@@ -887,20 +917,20 @@ sup.ast{color:var(--morado);font-weight:900}
       <div class="mxrow reveal d3" data-mx>
         <div class="mx-main">
           <div class="pn"><small>Pilar 3</small>Capturar el mercado de seguros embebidos</div>
-          <div class="pw"><span data-count="8">0</span><small>%</small></div>
-          <div class="mxbar"><i class="sOV" style="--w:41.6%" data-tip="Oferta de Valor · 5%"></i><i class="sMT" style="--w:25%" data-tip="Visión Cliente &amp; Martech · 3%"></i><i class="sEX" style="--w:16.7%" data-tip="Experiencia de Cliente · 2%"></i><i class="sMK" style="--w:16.7%" data-tip="Mercadeo Estratégico · 2%"></i></div>
+          <div class="pw"><span data-count="15">0</span><small>%</small></div>
+          <div class="mxbar"><i class="sOV" style="--w:50%" data-tip="Oferta de Valor · 8%"></i><i class="sMT" style="--w:25%" data-tip="Visión Cliente &amp; Martech · 4%"></i><i class="sEX" style="--w:12.5%" data-tip="Experiencia de Cliente · 2%"></i><i class="sMK" style="--w:12.5%" data-tip="Mercadeo Estratégico · 2%"></i></div>
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
-            <div class="jg"><span class="jc">3.1</span><p>Impulsar seguros embebidos en gaseras (Fase 1: Grupo)</p><span class="jp">5% util. neta 2030</span></div>
-            <div class="jg"><span class="jc">3.2</span><p>Desarrollar oferta de seguros embebidos con aliados (Hoteles, CEET, Porvenir)</p><span class="jp">5% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">3.1</span><p>Impulsar seguros embebidos en gaseras (Fase 1: Grupo)</p><span class="jpv">6%</span><span class="jp">5% util. neta 2030</span></div>
+            <div class="jg"><span class="jc">3.2</span><p>Desarrollar oferta de seguros embebidos con aliados (Hoteles, CEET, Porvenir)</p><span class="jpv">9%</span><span class="jp">5% util. neta 2030</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
-            <div class="mxd"><span class="lvl lead">Lidera · 5%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Construcción de seguros embebidos con gaseras, hoteles y aliados.</span></div>
-            <div class="mxd"><span class="lvl co">Co-responsable · 3%</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>Datos, tracking y medición del desempeño embebido.</span></div>
+            <div class="mxd"><span class="lvl lead">Lidera · 8%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Construcción de seguros embebidos con gaseras, hoteles y aliados.</span></div>
+            <div class="mxd"><span class="lvl co">Co-responsable · 4%</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>Datos, tracking y medición del desempeño embebido.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Experiencia sin fricción en el canal del aliado.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Presencia digital y comunicación en el punto de contexto.</span></div>
           </div>
@@ -914,7 +944,7 @@ sup.ast{color:var(--morado);font-weight:900}
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
             <div class="jg"><span class="jc">4.1</span><p>Adaptar la compañía a las nuevas condiciones del mercado y normativas (Ley 100)</p></div>
             <div class="jg"><span class="jc">4.2</span><p>Participar en las posibles licitaciones de Colpensiones según Reforma Pensional</p></div>
@@ -928,19 +958,19 @@ sup.ast{color:var(--morado);font-weight:900}
       <div class="mxrow reveal d5" data-mx>
         <div class="mx-main">
           <div class="pn"><small>Pilar 5</small>Transformar la experiencia del consumidor financiero de seguros</div>
-          <div class="pw"><span data-count="10">0</span><small>%</small></div>
-          <div class="mxbar"><i class="sOV" style="--w:20%" data-tip="Oferta de Valor · 2%"></i><i class="sMT" style="--w:30%" data-tip="Visión Cliente &amp; Martech · 3%"></i><i class="sEX" style="--w:40%" data-tip="Experiencia de Cliente · 4%"></i><i class="sMK" style="--w:10%" data-tip="Mercadeo Estratégico · 1%"></i></div>
+          <div class="pw"><span data-count="12">0</span><small>%</small></div>
+          <div class="mxbar"><i class="sOV" style="--w:16.7%" data-tip="Oferta de Valor · 2%"></i><i class="sMT" style="--w:33.3%" data-tip="Visión Cliente &amp; Martech · 4%"></i><i class="sEX" style="--w:41.6%" data-tip="Experiencia de Cliente · 5%"></i><i class="sMK" style="--w:8.4%" data-tip="Mercadeo Estratégico · 1%"></i></div>
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
-            <div class="jg"><span class="jc">P5</span><p>Transformar la experiencia del consumidor financiero de seguros, apalancados en tecnología e innovación</p></div>
+            <div class="jg"><span class="jc">P5</span><p>Transformar la experiencia del consumidor financiero de seguros, apalancados en tecnología e innovación</p><span class="jpv">12%</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
-            <div class="mxd"><span class="lvl lead">Lidera · 4%</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Fricciones, postventa, retención y omnicanalidad del consumidor financiero.</span></div>
-            <div class="mxd"><span class="lvl co">Co-responsable · 3%</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>Voz del cliente, personalización y medición de la experiencia.</span></div>
+            <div class="mxd"><span class="lvl lead">Lidera · 5%</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Fricciones, postventa, retención y omnicanalidad del consumidor financiero.</span></div>
+            <div class="mxd"><span class="lvl co">Co-responsable · 4%</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>Voz del cliente, personalización y medición de la experiencia.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Ofertas que simplifican la relación de protección del cliente.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 1%</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Comunicación clara, educación y autoservicio digital.</span></div>
           </div>
@@ -949,36 +979,30 @@ sup.ast{color:var(--morado);font-weight:900}
       <div class="mxrow reveal d6" data-mx>
         <div class="mx-main">
           <div class="pn"><small>Pilar 6</small>Habilitadores de capacidades y gobierno</div>
-          <div class="pw"><span data-count="20">0</span><small>%</small></div>
-          <div class="mxbar"><i class="sOV" style="--w:65%" data-tip="Oferta de Valor · 13%"></i><i class="sMT" style="--w:10%" data-tip="Visión Cliente &amp; Martech · 2%"></i><i class="sEX" style="--w:10%" data-tip="Experiencia de Cliente · 2%"></i><i class="sMK" style="--w:15%" data-tip="Mercadeo Estratégico · 3%"></i></div>
+          <div class="pw"><span data-count="13">0</span><small>%</small></div>
+          <div class="mxbar"><i class="sOV" style="--w:62.5%" data-tip="Oferta de Valor · 10%"></i><i class="sMT" style="--w:12.5%" data-tip="Visión Cliente &amp; Martech · 2%"></i><i class="sEX" style="--w:12.5%" data-tip="Experiencia de Cliente · 2%"></i><i class="sMK" style="--w:12.5%" data-tip="Mercadeo Estratégico · 2%"></i></div>
           <div class="chev">▾</div>
         </div>
         <div class="mx-det"><div class="mx-det-in">
-          <div class="subt">Jugadas del pilar</div>
+          <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
-            <div class="jg"><span class="jc">6.1</span><p>Alinear modelo de gobierno de seguros dentro del grupo empresarial</p></div>
-            <div class="jg"><span class="jc">6.2</span><p>Potenciar modelo de gobierno de bancaseguros entre Alfa, Bancos y Cardif</p><span class="jp">10% · lidera Oferta de Valor</span></div>
-            <div class="jg"><span class="jc">6.3</span><p>Nuevo modelo comercial B2B2C</p></div>
-            <div class="jg"><span class="jc">6.4</span><p>Desarrollar capacidades propias en el modelo operativo de Alfa</p></div>
+            <div class="jg"><span class="jc">6.1</span><p>Alinear modelo de gobierno de seguros dentro del grupo empresarial</p><span class="jpv">2%</span></div>
+            <div class="jg"><span class="jc">6.2</span><p>Potenciar modelo de gobierno de bancaseguros entre Alfa, Bancos y Cardif</p><span class="jpv">7%</span><span class="jp">Lidera Oferta de Valor</span></div>
+            <div class="jg"><span class="jc">6.3</span><p>Nuevo modelo comercial B2B2C</p><span class="jpv">3%</span></div>
+            <div class="jg"><span class="jc">6.4</span><p>Desarrollar capacidades propias en el modelo operativo de Alfa</p><span class="jpv">1%</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
-            <div class="mxd"><span class="lvl lead">Lidera · 13%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Gobierno de bancaseguros Alfa–Bancos–Cardif (10%), gobierno de portafolio y nuevo modelo B2B2C.</span></div>
-            <div class="mxd"><span class="lvl hab">Habilita · 3%</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Activos digitales y capacidades de comunicación escalables.</span></div>
+            <div class="mxd"><span class="lvl lead">Lidera · 10%</span><b><i style="background:#005D55"></i>Oferta de Valor</b><span>Gobierno de bancaseguros Alfa–Bancos–Cardif (7%), gobierno de portafolio y nuevo modelo B2B2C.</span></div>
+            <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#A8DCCB"></i>Mercadeo Estratégico</b><span>Activos digitales y capacidades de comunicación escalables.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#57BFA0"></i>Experiencia de Cliente</b><span>Estándares de servicio y consistencia omnicanal.</span></div>
             <div class="mxd"><span class="lvl hab">Habilita · 2%</span><b><i style="background:#009B76"></i>Visión Cliente &amp; Martech</b><span>CRM, automatización y gobierno de datos del cliente.</span></div>
           </div>
         </div></div>
       </div>
     </div>
-    <div class="mx-legend reveal">
-      <span><i style="background:#005D55"></i>Oferta de Valor</span>
-      <span><i style="background:#009B76"></i>Visión Cliente &amp; Martech</span>
-      <span><i style="background:#57BFA0"></i>Experiencia de Cliente</span>
-      <span><i style="background:#A8DCCB"></i>Mercadeo Estratégico &amp; Activos Digitales</span>
-    </div>
     <div class="mx-notes">
-      <div class="mxn reveal d1"><div class="ni"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><p><b>Bancaseguros concentra el 55%</b> de la contribución estratégica de la Gerencia. El modelo de gobierno entre Alfa, Bancos y Cardif pesa un 10% dentro de los habilitadores, liderado por Oferta de Valor.</p></div>
+      <div class="mxn reveal d1"><div class="ni"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><p><b>Bancaseguros concentra el 55%</b> de la contribución estratégica de la Gerencia. El modelo de gobierno entre Alfa, Bancos y Cardif pesa un 7% dentro de los habilitadores, liderado por Oferta de Valor.</p></div>
       <div class="mxn reveal d2"><div class="ni"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg></div><p><b>Martech concentra la habilitación:</b> segmentación, automatización, propensión, venta al stock y medición transversal de toda la estrategia.</p></div>
       <div class="mxn reveal d3"><div class="ni"><svg viewBox="0 0 24 24"><path d="M4 14c2 3 5 4 8 4s6-1 8-4"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg></div><p><b>Experiencia lidera</b> fricciones, postventa, retención y omnicanalidad como palancas de permanencia y valor.</p></div>
       <div class="mxn reveal d4"><div class="ni"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><p><b>Mercadeo acelera</b> activación, conversión, educación y presencia digital para acompañar el crecimiento comercial.</p></div>
@@ -1159,4 +1183,3 @@ nodeNet(document.getElementById('closeCanvas'),46000);
 </script>
 </body>
 </html>
-<!-- actualización -->
