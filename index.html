@@ -262,6 +262,97 @@ nav:not(.solid) .burger span{background:#fff}
 .eco-quote{max-width:880px;margin:48px auto 0;text-align:center;font-size:clamp(1.05rem,2vw,1.35rem);font-weight:700;color:var(--azul);line-height:1.45}
 .eco-quote .hl{color:var(--alfa)}
 
+/* COLABORACION */
+#colaboracion{background:linear-gradient(180deg,#fff,var(--bg))}
+.colab-hero{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-bottom:90px}
+.colab-hero .eyebrow{justify-content:center}
+.colab-hero h2{font-size:clamp(2rem,4.4vw,3.2rem);color:var(--azul);max-width:760px}
+.colab-hero>p{font-size:1.08rem;color:var(--muted);max-width:740px;margin-top:18px}
+.colab-line{width:min(560px,86vw);margin:36px auto 0}
+.colab-line svg{width:100%;height:auto;display:block;overflow:visible}
+.colab-line .clp{stroke:var(--alfa);stroke-width:2;fill:none;stroke-dasharray:560;stroke-dashoffset:560;transition:stroke-dashoffset .9s cubic-bezier(.4,0,.2,1) .15s}
+.colab-line circle{fill:#fff;stroke:var(--alfa);stroke-width:2;opacity:0;transition:opacity .45s}
+.colab-line circle.cfill{fill:var(--alfa)}
+.colab-hero.in .clp{stroke-dashoffset:0}
+.colab-hero.in .colab-line circle{opacity:1}
+.colab-hero.in .colab-line circle:nth-of-type(1){transition-delay:.2s}
+.colab-hero.in .colab-line circle:nth-of-type(2){transition-delay:.45s}
+.colab-hero.in .colab-line circle:nth-of-type(3){transition-delay:.7s}
+.colab-hero.in .colab-line circle:nth-of-type(4){transition-delay:.95s}
+.colab-emph{margin-top:32px;font-size:clamp(1.1rem,2vw,1.42rem);font-weight:800;color:var(--azul);letter-spacing:-.01em}
+.colab-emph span{color:var(--alfa)}
+.pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pfcard{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px 30px;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.pfcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pfcard::before{content:"";position:absolute;top:0;left:0;right:0;height:4px}
+.pfcard.yes::before{background:var(--alfa)}
+.pfcard.no::before{background:var(--amarillo)}
+.pf-top{display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.pf-ic{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.pfcard.yes .pf-ic{background:rgba(0,155,118,.12)}
+.pfcard.no .pf-ic{background:rgba(254,203,0,.2)}
+.pf-ic svg{width:22px;height:22px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pfcard.yes .pf-ic svg{stroke:var(--alfa)}
+.pfcard.no .pf-ic svg{stroke:#a37e00}
+.pf-top b{font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.pfcard.yes .pf-top b{color:var(--verde-osc)}
+.pfcard.no .pf-top b{color:#8a6d00}
+.pfcard ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.pfcard li{display:flex;gap:11px;align-items:flex-start;font-size:.9rem;line-height:1.5;color:var(--texto);padding:9px 12px;border-radius:11px;transition:.22s}
+.pfcard.yes li:hover{background:rgba(0,155,118,.06)}
+.pfcard.no li:hover{background:rgba(254,203,0,.1)}
+.pfcard li svg{width:16px;height:16px;flex:0 0 auto;margin-top:4px;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.pfcard.yes li svg{stroke:var(--alfa)}
+.pfcard.no li svg{stroke:#c79a00}
+.reveal.rev-l{transform:translateX(-38px)}
+.reveal.rev-r{transform:translateX(38px)}
+.reveal.rev-l.in,.reveal.rev-r.in{transform:none}
+.grados{margin-top:28px}
+.gr-title{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--verde-osc);margin-bottom:16px}
+.gr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grcol{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);cursor:pointer;transition:.3s;outline:none}
+.grcol:hover,.grcol.active{transform:translateY(-4px);box-shadow:var(--shadow)}
+.grcol:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+.grcol.active{border-color:var(--acento)}
+.gr-head{padding:15px 20px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.grcol.g1 .gr-head{background:linear-gradient(120deg,var(--alfa),#00b489)}
+.grcol.g2 .gr-head{background:linear-gradient(120deg,var(--verde-osc),var(--azul))}
+.grcol.g3 .gr-head{background:linear-gradient(120deg,var(--morado),#8a3aa0)}
+.gr-head b{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.gr-dots{display:inline-flex;gap:4px}
+.gr-dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35)}
+.gr-dots i.on{background:#fff}
+.grcol ul{list-style:none;padding:18px 20px;display:flex;flex-direction:column;gap:9px}
+.grcol li{display:flex;gap:10px;align-items:flex-start;font-size:.87rem;color:var(--texto);line-height:1.45}
+.grcol li::before{content:"";width:6px;height:6px;border-radius:50%;margin-top:7px;flex:0 0 auto}
+.grcol.g1 li::before{background:var(--alfa)}
+.grcol.g2 li::before{background:var(--verde-osc)}
+.grcol.g3 li::before{background:var(--morado)}
+.gr-caption{margin-top:12px;text-align:center;font-size:.76rem;color:var(--muted);letter-spacing:.06em}
+.ma-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.maf{border:1px solid var(--line);background:var(--panel);color:var(--muted);font-family:var(--font);font-size:.78rem;font-weight:600;padding:9px 16px;border-radius:30px;cursor:pointer;transition:.22s}
+.maf:hover{border-color:var(--alfa);color:var(--verde-osc)}
+.maf.active{background:var(--azul);border-color:var(--azul);color:#fff}
+.maf:focus-visible{outline:2px solid var(--acento);outline-offset:2px}
+.ma-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.actor{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:var(--shadow-sm);transition:transform .28s,box-shadow .28s,opacity .35s,filter .35s,border-color .28s;position:relative;display:flex;flex-direction:column}
+.actor:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--ac,var(--alfa))}
+.actor.dim{opacity:.25;filter:saturate(.3)}
+.actor.hub{border-color:rgba(0,155,118,.55);background:linear-gradient(165deg,rgba(0,155,118,.05),#fff)}
+.a-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.a-num{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.86rem;color:#fff;background:var(--ac,var(--alfa))}
+.actor[data-group="dir"]{--ac:var(--azul)}
+.actor[data-group="neg"]{--ac:var(--acento)}
+.actor[data-group="exp"]{--ac:var(--alfa)}
+.actor[data-group="imp"]{--ac:var(--morado)}
+.actor[data-group="ali"]{--ac:#c79a00}
+.a-ic svg{width:22px;height:22px;stroke:var(--ac,var(--alfa));fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.actor h4{font-size:.92rem;color:var(--azul);line-height:1.3;margin-bottom:6px}
+.actor p{font-size:.78rem;color:var(--muted);line-height:1.45;flex:1}
+.actor .a-g{margin-top:12px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac,var(--alfa))}
+.ma-note{margin-top:24px;background:rgba(0,155,118,.06);border:1px solid rgba(0,155,118,.25);border-radius:16px;padding:20px 24px;font-size:.88rem;color:var(--texto);line-height:1.6}
+.ma-note b{color:var(--verde-osc)}
+
 /* FRENTES */
 #frentes{background:linear-gradient(180deg,var(--bg),#fff)}
 .frentes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -496,6 +587,7 @@ sup.ast{color:var(--morado);font-weight:900}
 @media(max-width:1024px){
   .hero-rings{right:-320px;opacity:.6}
   .tics{grid-template-columns:repeat(2,1fr)}
+  .ma-grid{grid-template-columns:repeat(2,1fr)}
   .stair-grid{grid-template-columns:repeat(2,1fr)}
   .amb.p1,.amb.p2,.amb.p3,.amb.p4{margin-top:0}
   .mdims{grid-template-columns:repeat(2,1fr)}
@@ -524,6 +616,9 @@ sup.ast{color:var(--morado);font-weight:900}
   .darr::after{right:auto;left:50%;top:auto;bottom:1px;transform:translateX(-50%) rotate(135deg)}
   .hero-rings{display:none}
   .tics{grid-template-columns:1fr}
+  .colab-hero{min-height:auto;padding:10px 0 0;margin-bottom:70px}
+  .pf-grid,.gr-grid{grid-template-columns:1fr}
+  .ma-grid{grid-template-columns:1fr}
   .eco2{grid-template-columns:1fr;gap:22px}
   .eco-conn{display:none}
   .eco-cli{max-width:190px}
@@ -576,6 +671,7 @@ sup.ast{color:var(--morado);font-weight:900}
       <a href="#formula" class="nl">Fórmula</a>
       <a href="#mision" class="nl">Misión</a>
       <a href="#ecosistema" class="nl">Ecosistema</a>
+      <a href="#colaboracion" class="nl">Colaboración</a>
       <a href="#frentes" class="nl">Frentes</a>
       <a href="#aceleracion" class="nl">Aceleración</a>
       <a href="#matriz" class="nl">Matriz 2030</a>
@@ -607,9 +703,9 @@ sup.ast{color:var(--morado);font-weight:900}
 <section id="oportunidad" class="block">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">Oportunidad para Seguros Alfa</div>
+      <div class="eyebrow">Oportunidad para Alfa</div>
       <h2>Lo que hoy espera el cliente</h2>
-      <p>Y cómo Seguros Alfa debe evolucionar para responder a ese cliente.</p>
+      <p>Y cómo Alfa debe evolucionar para responder a ese cliente.</p>
     </div>
     <div class="opp-grid">
       <div class="cards reveal d1" style="grid-template-columns:1fr;gap:14px">
@@ -643,7 +739,7 @@ sup.ast{color:var(--morado);font-weight:900}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow light">Nuestra ambición al 2030</div>
-      <h2>Cuatro pilares que construyen la Ambición Seguros Alfa 2030</h2>
+      <h2>Cuatro pilares que construyen la Ambición Alfa 2030</h2>
       <p>Queremos lograr una oferta más relevante, con mayor penetración, más rentable y a escala.</p>
     </div>
     <div class="stair reveal d1" id="stair">
@@ -693,7 +789,7 @@ sup.ast{color:var(--morado);font-weight:900}
     </div>
     <div class="mission reveal d1">
       <p class="mtext">Diseñar, evolucionar y orquestar <span class="hl">propuestas de valor diferenciales</span> para bancos, empresas y clientes del ecosistema Grupo Aval — integrando experiencia, mercadeo, activos digitales, data e IA para impulsar <span class="hl">crecimiento rentable, conservación y relaciones sostenibles</span>.</p>
-      <div class="msub">Convertir la oferta de Seguros Alfa en experiencias simples, relevantes y rentables.</div>
+      <div class="msub">Convertir la oferta de Alfa en experiencias simples, relevantes y rentables.</div>
     </div>
     <div class="mdims reveal d2">
       <div class="mdim"><div class="mi"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>Oferta de Valor</h3><p>Propuestas diferenciales y relevantes, conectadas al momento de vida del cliente.</p></div>
@@ -713,7 +809,7 @@ sup.ast{color:var(--morado);font-weight:900}
     </div>
     <div class="bridge reveal d4">
       <div class="bst"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6 5.7 21l2.3-7.2-6-4.4h7.6z"/></svg></div>
-      <p>La Gerencia debe ser el <b>puente</b> entre lo que Seguros Alfa ofrece, lo que el cliente necesita y lo que el ecosistema puede habilitar.</p>
+      <p>La Gerencia debe ser el <b>puente</b> entre lo que Alfa ofrece, lo que el cliente necesita y lo que el ecosistema puede habilitar.</p>
     </div>
   </div>
 </section>
@@ -748,6 +844,152 @@ sup.ast{color:var(--morado);font-weight:900}
     <p class="eco-quote reveal d3">Oferta de Valor no reemplaza capacidades: <span class="hl">las conecta bajo una misma estrategia</span> para crear valor para el cliente y resultados para el negocio.</p>
   </div>
 </section>
+<!-- 6b · COLABORACION -->
+<section id="colaboracion" class="block">
+  <div class="wrap">
+    <div class="colab-hero reveal">
+      <div class="eyebrow">Modelo de colaboración</div>
+      <h2>Cómo trabajamos juntos</h2>
+      <p>Oferta de Valor conecta las necesidades del negocio y del cliente, estructura las oportunidades y moviliza las capacidades necesarias para convertirlas en soluciones de mayor impacto.</p>
+      <div class="colab-line" aria-hidden="true">
+        <svg viewBox="0 0 560 44"><path class="clp" d="M14 22H546"/><circle cx="14" cy="22" r="6"/><circle cx="191" cy="22" r="6" class="cfill"/><circle cx="369" cy="22" r="6"/><circle cx="546" cy="22" r="6" class="cfill"/></svg>
+      </div>
+      <div class="colab-emph">Orquestamos la conexión. <span>Las áreas hacen posible la ejecución.</span></div>
+    </div>
+
+    <div class="sec-head reveal">
+      <div class="eyebrow">Posición y fronteras</div>
+      <h2>Oferta de Valor orquesta, no reemplaza</h2>
+    </div>
+    <div class="pf-grid">
+      <div class="pfcard yes reveal rev-l">
+        <div class="pf-top"><span class="pf-ic"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><b>Oferta de Valor sí</b></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Estructura y conecta oportunidades.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lidera la propuesta de valor y el journey.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Facilita la metodología de priorización.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Construye la estrategia de comunicación y la estrategia comercial.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Define la estrategia, el monitoreo y la vocación del activo digital.</li>
+        </ul>
+      </div>
+      <div class="pfcard no reveal rev-r">
+        <div class="pf-top"><span class="pf-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></span><b>Oferta de Valor no</b></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No define pricing, riesgo ni cumplimiento.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No ejecuta desarrollos tecnológicos o analíticos.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No opera pólizas ni atiende siniestros.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No reemplaza la relación con el banco o aliado.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No implementa productos ni activos digitales.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grados reveal d2">
+      <div class="gr-title">Grados de intervención</div>
+      <div class="gr-grid">
+        <div class="grcol g1" data-gr tabindex="0" role="button" aria-label="Nivel 1: Oferta de Valor lidera">
+          <div class="gr-head"><b>OV lidera</b><span class="gr-dots"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+          <ul>
+            <li>Diseño y estrategia del producto, coberturas y asistencias.</li>
+            <li>Journey y objetivos.</li>
+            <li>Experiencia de cliente.</li>
+            <li>Pilotos y medición.</li>
+          </ul>
+        </div>
+        <div class="grcol g2" data-gr tabindex="0" role="button" aria-label="Nivel 2: Oferta de Valor acompaña">
+          <div class="gr-head"><b>OV acompaña</b><span class="gr-dots"><i class="on"></i><i class="on"></i><i></i></span></div>
+          <ul>
+            <li>Business case.</li>
+            <li>Diseño técnico y operación.</li>
+            <li>Implementación tecnológica.</li>
+            <li>Negociación con el aliado.</li>
+          </ul>
+        </div>
+        <div class="grcol g3" data-gr tabindex="0" role="button" aria-label="Nivel 3: Oferta de Valor es informada">
+          <div class="gr-head"><b>OV es informada</b><span class="gr-dots"><i class="on"></i><i></i><i></i></span></div>
+          <ul>
+            <li>Pricing y riesgo.</li>
+            <li>Cumplimiento.</li>
+            <li>Secuencia técnica y legal.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="gr-caption">El nivel de intervención de Oferta de Valor disminuye progresivamente de izquierda a derecha</div>
+    </div>
+    <div class="gov reveal d3">
+      <div class="gi"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+      <div><b>Principio rector</b><p>El gobierno se construye alrededor de la claridad de las decisiones, no del poder de un área. Oferta de Valor lidera la conexión; las áreas, la ejecución.</p></div>
+    </div>
+
+    <div class="sec-head reveal" style="margin-top:100px">
+      <div class="eyebrow">Mapa de actores</div>
+      <h2>Quién participa y con qué rol</h2>
+    </div>
+    <div class="ma-filters reveal" role="toolbar" aria-label="Filtrar actores por grupo">
+      <button class="maf active" data-g="all" type="button" aria-pressed="true">Todos</button>
+      <button class="maf" data-g="dir" type="button" aria-pressed="false">Dirección y decisión</button>
+      <button class="maf" data-g="neg" type="button" aria-pressed="false">Diseño y negocio</button>
+      <button class="maf" data-g="exp" type="button" aria-pressed="false">Experiencia y activación</button>
+      <button class="maf" data-g="imp" type="button" aria-pressed="false">Implementación y capacidades</button>
+      <button class="maf" data-g="ali" type="button" aria-pressed="false">Aliados</button>
+    </div>
+    <div class="ma-grid">
+      <div class="actor reveal d1" data-group="dir">
+        <div class="a-top"><span class="a-num">1</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span></div>
+        <h4>Presidencia / VP Técnico Comercial</h4><p>Dirección, inversión y arbitraje.</p>
+        <div class="a-g">Dirección y decisión</div>
+      </div>
+      <div class="actor hub reveal d2" data-group="neg">
+        <div class="a-top"><span class="a-num">2</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 5-8 5-8-5z"/><path d="M4 12l8 5 8-5"/><path d="M4 17l8 5 8-5"/></svg></span></div>
+        <h4>Oferta de Valor</h4><p>Relación con Cardif en producto, mercadeo y experiencia. Identifica oportunidades.</p>
+        <div class="a-g">Diseño y negocio · Nodo articulador</div>
+      </div>
+      <div class="actor reveal d3" data-group="neg">
+        <div class="a-top"><span class="a-num">3</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span></div>
+        <h4>Bancaseguros / Comercial</h4><p>Resultado comercial y relación con bancos.</p>
+        <div class="a-g">Diseño y negocio</div>
+      </div>
+      <div class="actor reveal d4" data-group="neg">
+        <div class="a-top"><span class="a-num">4</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M9 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7z"/><path d="M9 3v4H5M9 13l2 2 4-4"/></svg></span></div>
+        <h4>Suscripción / Producto — S/P</h4><p>Técnica, suscripción, operación, seguros obligatorios y viabilidad.</p>
+        <div class="a-g">Diseño y negocio</div>
+      </div>
+      <div class="actor reveal d5" data-group="ali">
+        <div class="a-top"><span class="a-num">5</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 1 0-6l2-2a4 4 0 0 1 6 6l-1 1"/><path d="M14 10a4 4 0 0 1 0 6l-2 2a4 4 0 0 1-6-6l1-1"/></svg></span></div>
+        <h4>Cardif</h4><p>Aliado cocreador de la capacidad aseguradora.</p>
+        <div class="a-g">Aliados</div>
+      </div>
+      <div class="actor reveal d1" data-group="exp">
+        <div class="a-top"><span class="a-num">6</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></span></div>
+        <h4>Experiencia de Cliente</h4><p>Journey, fricciones y posventa.</p>
+        <div class="a-g">Experiencia y activación</div>
+      </div>
+      <div class="actor reveal d2" data-group="exp">
+        <div class="a-top"><span class="a-num">7</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 11l14-5v12L3 13v-2z"/><path d="M17 8a4 4 0 0 1 0 8M7 13v5a2 2 0 0 0 4 0v-4"/></svg></span></div>
+        <h4>Mercadeo Estratégico y Activos Digitales</h4><p>Activación, conversión y presencia digital.</p>
+        <div class="a-g">Experiencia y activación</div>
+      </div>
+      <div class="actor reveal d3" data-group="exp">
+        <div class="a-top"><span class="a-num">8</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 11l10-4M7 13l10 4"/></svg></span></div>
+        <h4>Visión Cliente y MarTech</h4><p>Segmentación, medición y estrategia.</p>
+        <div class="a-g">Experiencia y activación</div>
+      </div>
+      <div class="actor reveal d4" data-group="imp">
+        <div class="a-top"><span class="a-num">9</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span></div>
+        <h4>Transformación</h4><p>Integración e implementación de productos y activos digitales.</p>
+        <div class="a-g">Implementación y capacidades</div>
+      </div>
+      <div class="actor reveal d5" data-group="imp">
+        <div class="a-top"><span class="a-num">10</span><span class="a-ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></span></div>
+        <h4>Tecnología y Analítica</h4><p>Desarrollo y provisión de datos.</p>
+        <div class="a-g">Implementación y capacidades</div>
+      </div>
+    </div>
+    <div class="ma-note reveal">
+      <b>S/P — Suscripción y Producto</b> — consolida Obligatorios, Técnica, Operaciones y viabilidad financiera. Los <b>bancos del Grupo Aval y los proveedores o aliados</b> participan como canal y cocreadores; su interlocución la lideran las Gerencias Comerciales.
+    </div>
+  </div>
+</section>
+
 <!-- 7 · FRENTES -->
 <section id="frentes" class="block">
   <div class="wrap">
@@ -850,7 +1092,7 @@ sup.ast{color:var(--morado);font-weight:900}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Matriz de contribución estratégica</div>
-      <h2>Contribución de la Gerencia a las jugadas estratégicas Seguros Alfa 2030</h2>
+      <h2>Contribución de la Gerencia a las jugadas estratégicas Alfa 2030</h2>
       <p>Cómo se distribuye el aporte de los cuatro frentes de la Gerencia sobre los seis pilares de la estrategia corporativa.</p>
     </div>
     <div class="mx-title reveal">Peso por frente</div>
@@ -987,9 +1229,9 @@ sup.ast{color:var(--morado);font-weight:900}
           <div class="subt">Jugadas del pilar · el porcentaje verde es su peso sobre el 100% de la estrategia</div>
           <div class="jgs">
             <div class="jg"><span class="jc">6.1</span><p>Alinear modelo de gobierno de seguros dentro del grupo empresarial</p><span class="jpv">2%</span></div>
-            <div class="jg"><span class="jc">6.2</span><p>Potenciar modelo de gobierno de bancaseguros entre Seguros Alfa, Bancos y Cardif</p><span class="jpv">7%</span><span class="jp">Lidera Oferta de Valor</span></div>
+            <div class="jg"><span class="jc">6.2</span><p>Potenciar modelo de gobierno de bancaseguros entre Alfa, Bancos y Cardif</p><span class="jpv">7%</span><span class="jp">Lidera Oferta de Valor</span></div>
             <div class="jg"><span class="jc">6.3</span><p>Nuevo modelo comercial B2B2C</p><span class="jpv">3%</span></div>
-            <div class="jg"><span class="jc">6.4</span><p>Desarrollar capacidades propias en el modelo operativo de Seguros Alfa</p><span class="jpv">1%</span></div>
+            <div class="jg"><span class="jc">6.4</span><p>Desarrollar capacidades propias en el modelo operativo de Alfa</p><span class="jpv">1%</span></div>
           </div>
           <div class="subt">Contribución por frente</div>
           <div class="mx-fr4">
@@ -1002,7 +1244,7 @@ sup.ast{color:var(--morado);font-weight:900}
       </div>
     </div>
     <div class="mx-notes">
-      <div class="mxn reveal d1"><div class="ni"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><p><b>Bancaseguros concentra el 55%</b> de la contribución estratégica de la Gerencia. El modelo de gobierno entre Seguros Alfa, Bancos y Cardif pesa un 7% dentro de los habilitadores, liderado por Oferta de Valor.</p></div>
+      <div class="mxn reveal d1"><div class="ni"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><p><b>Bancaseguros concentra el 55%</b> de la contribución estratégica de la Gerencia. El modelo de gobierno entre Alfa, Bancos y Cardif pesa un 7% dentro de los habilitadores, liderado por Oferta de Valor.</p></div>
       <div class="mxn reveal d2"><div class="ni"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg></div><p><b>Martech concentra la habilitación:</b> segmentación, automatización, propensión, venta al stock y medición transversal de toda la estrategia.</p></div>
       <div class="mxn reveal d3"><div class="ni"><svg viewBox="0 0 24 24"><path d="M4 14c2 3 5 4 8 4s6-1 8-4"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg></div><p><b>Experiencia lidera</b> fricciones, postventa, retención y omnicanalidad como palancas de permanencia y valor.</p></div>
       <div class="mxn reveal d4"><div class="ni"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><p><b>Mercadeo acelera</b> activación, conversión, educación y presencia digital para acompañar el crecimiento comercial.</p></div>
@@ -1033,7 +1275,7 @@ sup.ast{color:var(--morado);font-weight:900}
           <b>Ajustar, pausar o rediseñar</b>
           <p>El aprendizaje vuelve al ciclo: nueva hipótesis, nueva propuesta o cierre disciplinado de la iniciativa.</p>
         </div>
-        <div class="gd-diamond"><div class="dm"></div><div class="dt">¿Demostró valor para el cliente y rentabilidad para Seguros Alfa?</div></div>
+        <div class="gd-diamond"><div class="dm"></div><div class="dt">¿Demostró valor para el cliente y rentabilidad para Alfa?</div></div>
         <div class="gd-branch si">
           <span class="tag">Si demuestra valor</span>
           <b>7 · Escalar y optimizar</b>
@@ -1042,7 +1284,7 @@ sup.ast{color:var(--morado);font-weight:900}
       </div>
       <div class="gov reveal d3">
         <div class="gi"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
-        <div><b>Principio de gestión</b><p>No todas las ideas se escalan. Solo escalan las iniciativas que demuestran valor para el cliente y rentabilidad para Seguros Alfa.</p></div>
+        <div><b>Principio de gestión</b><p>No todas las ideas se escalan. Solo escalan las iniciativas que demuestran valor para el cliente y rentabilidad para Alfa.</p></div>
       </div>
     </div>
   </div>
@@ -1099,7 +1341,7 @@ sup.ast{color:var(--morado);font-weight:900}
   <div class="close-orbs"><span class="orb orb1"></span><span class="orb orb2"></span><span class="orb orb3"></span></div>
   <div class="wrap close-in">
     <div class="eyebrow light reveal" style="justify-content:center">Hacia 2030</div>
-    <div class="m1 reveal d1">Seguros Seguros Alfa será relevante no solo por lo que asegura, <b>sino por cómo acompaña, protege y genera valor</b> para cada cliente.</div>
+    <div class="m1 reveal d1">Seguros Alfa será relevante no solo por lo que asegura, <b>sino por cómo acompaña, protege y genera valor</b> para cada cliente.</div>
     <p class="m2 reveal d2">Oferta de Valor será la capacidad que transforme datos en decisiones, decisiones en acciones y acciones en resultados medibles.</p>
     <div class="close-quote reveal d3"><p>El futuro de Seguros Alfa no está únicamente en vender más seguros. Está en construir relaciones de protección <span class="hl">más relevantes, más simples y más valiosas</span>.</p></div>
     <div class="close-logo reveal d4"><img src="data:image/png;base64,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" alt="Seguros Alfa"></div>
@@ -1126,7 +1368,7 @@ function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({
 window.goTo=goTo;
 const sections=[
  {id:'hero',label:'Visión'},{id:'oportunidad',label:'Oportunidad'},{id:'ambicion',label:'Ambición'},
- {id:'formula',label:'Fórmula'},{id:'mision',label:'Misión'},{id:'ecosistema',label:'Ecosistema'},
+ {id:'formula',label:'Fórmula'},{id:'mision',label:'Misión'},{id:'ecosistema',label:'Ecosistema'},{id:'colaboracion',label:'Colaboración'},
  {id:'frentes',label:'Frentes'},{id:'aceleracion',label:'Aceleración'},{id:'matriz',label:'Matriz 2030'},
  {id:'modelo',label:'Modelo'},{id:'ruta',label:'Hoja de ruta'},{id:'cierre',label:'Cierre'}
 ];
@@ -1166,6 +1408,18 @@ document.addEventListener('keydown',(ev)=>{
 });
 const idxObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const i=sections.findIndex(s=>s.id===e.target.id);if(i>=0)curIdx=i;}});},{threshold:.5});
 sections.forEach(s=>{const el=document.getElementById(s.id);if(el)idxObs.observe(el);});
+/* colaboracion: niveles y filtros */
+document.querySelectorAll('[data-gr]').forEach(c=>{
+  const tg=()=>c.classList.toggle('active');
+  c.addEventListener('click',tg);
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tg();}});
+});
+const mafs=document.querySelectorAll('.maf');
+mafs.forEach(b=>b.addEventListener('click',()=>{
+  mafs.forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',x===b?'true':'false');});
+  const g=b.dataset.g;
+  document.querySelectorAll('.actor').forEach(a=>a.classList.toggle('dim',g!=='all'&&a.dataset.group!==g));
+}));
 /* node network canvases */
 function nodeNet(canvas,density){
   if(!canvas||reduceMotion)return;
