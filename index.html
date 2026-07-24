@@ -349,7 +349,9 @@ nav:not(.solid) .burger span{background:#fff}
 .a-ic svg{width:22px;height:22px;stroke:var(--ac,var(--alfa));fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .actor h4{font-size:.92rem;color:var(--azul);line-height:1.3;margin-bottom:6px}
 .actor p{font-size:.78rem;color:var(--muted);line-height:1.45;flex:1}
-.actor .a-g{margin-top:12px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac,var(--alfa))}
+.actor .a-tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px}
+.actor .a-tags span{font-size:.58rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ac,var(--alfa));background:color-mix(in srgb,var(--ac,var(--alfa)) 9%,transparent);border:1px solid color-mix(in srgb,var(--ac,var(--alfa)) 28%,transparent);border-radius:999px;padding:3px 9px;line-height:1.25}
+.actor .a-g{margin-top:10px;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac,var(--alfa));opacity:.75}
 .ma-note{margin-top:24px;background:rgba(0,155,118,.06);border:1px solid rgba(0,155,118,.25);border-radius:16px;padding:20px 24px;font-size:.88rem;color:var(--texto);line-height:1.6}
 .ma-note b{color:var(--verde-osc)}
 
@@ -854,7 +856,7 @@ sup.ast{color:var(--morado);font-weight:900}
       <div class="colab-line" aria-hidden="true">
         <svg viewBox="0 0 560 44"><path class="clp" d="M14 22H546"/><circle cx="14" cy="22" r="6"/><circle cx="191" cy="22" r="6" class="cfill"/><circle cx="369" cy="22" r="6"/><circle cx="546" cy="22" r="6" class="cfill"/></svg>
       </div>
-      <div class="colab-emph">Orquestamos la conexión. <span>Las áreas hacen posible la ejecución.</span></div>
+      <div class="colab-emph">Orquestamos la estrategia <span>y juntos hacemos que las cosas pasen.</span></div>
     </div>
 
     <div class="sec-head reveal">
@@ -868,7 +870,8 @@ sup.ast{color:var(--morado);font-weight:900}
           <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Estructura y conecta oportunidades.</li>
           <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lidera la propuesta de valor y el journey.</li>
           <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Facilita la metodología de priorización.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Construye la estrategia de comunicación y la estrategia comercial.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Construye la estrategia de comunicación.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Acompaña la construcción de estrategia comercial desde Mercadeo y Experiencia (antes, durante y después).</li>
           <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Define la estrategia, el monitoreo y la vocación del activo digital.</li>
         </ul>
       </div>
@@ -880,6 +883,7 @@ sup.ast{color:var(--morado);font-weight:900}
           <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No opera pólizas ni atiende siniestros.</li>
           <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No reemplaza la relación con el banco o aliado.</li>
           <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No implementa productos ni activos digitales.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>No plantea comisiones, ni planes de incentivos, ni metas comerciales.</li>
         </ul>
       </div>
     </div>
@@ -915,10 +919,6 @@ sup.ast{color:var(--morado);font-weight:900}
       </div>
       <div class="gr-caption">El nivel de intervención de Oferta de Valor disminuye progresivamente de izquierda a derecha</div>
     </div>
-    <div class="gov reveal d3">
-      <div class="gi"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
-      <div><b>Principio rector</b><p>El gobierno se construye alrededor de la claridad de las decisiones, no del poder de un área. Oferta de Valor lidera la conexión; las áreas, la ejecución.</p></div>
-    </div>
 
     <div class="sec-head reveal" style="margin-top:100px">
       <div class="eyebrow">Mapa de actores</div>
@@ -935,57 +935,57 @@ sup.ast{color:var(--morado);font-weight:900}
     <div class="ma-grid">
       <div class="actor reveal d1" data-group="dir">
         <div class="a-top"><span class="a-num">1</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span></div>
-        <h4>Presidencia / VP Técnico Comercial</h4><p>Dirección, inversión y arbitraje.</p>
-        <div class="a-g">Dirección y decisión</div>
+        <h4>Presidencia / VP Técnico Comercial</h4><p>Marca el rumbo, respalda las apuestas con recursos y destraba las decisiones clave.</p>
+        <div class="a-tags"><span>Dirección</span><span>Inversión</span><span>Arbitraje</span></div>
       </div>
       <div class="actor hub reveal d2" data-group="neg">
         <div class="a-top"><span class="a-num">2</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 5-8 5-8-5z"/><path d="M4 12l8 5 8-5"/><path d="M4 17l8 5 8-5"/></svg></span></div>
-        <h4>Oferta de Valor</h4><p>Relación con Cardif en producto, mercadeo y experiencia. Identifica oportunidades.</p>
-        <div class="a-g">Diseño y negocio · Nodo articulador</div>
+        <h4>Oferta de Valor</h4><p>Articula a Alfa y Cardif para diseñar y evolucionar una oferta relevante para el cliente y el negocio.</p>
+        <div class="a-tags"><span>Diseño de oferta</span><span>Articulación estratégica</span></div>
       </div>
       <div class="actor reveal d3" data-group="neg">
         <div class="a-top"><span class="a-num">3</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span></div>
-        <h4>Bancaseguros / Comercial</h4><p>Resultado comercial y relación con bancos.</p>
-        <div class="a-g">Diseño y negocio</div>
+        <h4>Bancaseguros / Comercial</h4><p>Lleva la oferta al canal bancario y responde por el desempeño del negocio en cada entidad.</p>
+        <div class="a-tags"><span>Resultado comercial</span><span>Relación con bancos</span></div>
       </div>
       <div class="actor reveal d4" data-group="neg">
         <div class="a-top"><span class="a-num">4</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M9 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7z"/><path d="M9 3v4H5M9 13l2 2 4-4"/></svg></span></div>
-        <h4>Suscripción / Producto — S/P</h4><p>Técnica, suscripción, operación, seguros obligatorios y viabilidad.</p>
-        <div class="a-g">Diseño y negocio</div>
+        <h4>Suscripción / Producto — S/P</h4><p>Da sustento técnico a cada solución: estructura los seguros y valida su sostenibilidad antes de salir al mercado.</p>
+        <div class="a-tags"><span>Suscripción</span><span>Operación</span><span>Viabilidad</span></div>
       </div>
       <div class="actor reveal d5" data-group="ali">
         <div class="a-top"><span class="a-num">5</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 1 0-6l2-2a4 4 0 0 1 6 6l-1 1"/><path d="M14 10a4 4 0 0 1 0 6l-2 2a4 4 0 0 1-6-6l1-1"/></svg></span></div>
-        <h4>Cardif</h4><p>Aliado cocreador de la capacidad aseguradora.</p>
-        <div class="a-g">Aliados</div>
+        <h4>Cardif</h4><p>Aliado cocreador de la oferta y brazo operativo: respalda producto, suscripción y operación de cada solución.</p>
+        <div class="a-tags"><span>Cocreación</span><span>Brazo operativo</span><span>Capacidad aseguradora</span></div>
       </div>
       <div class="actor reveal d1" data-group="exp">
         <div class="a-top"><span class="a-num">6</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></span></div>
-        <h4>Experiencia de Cliente</h4><p>Journey, fricciones y posventa.</p>
-        <div class="a-g">Experiencia y activación</div>
+        <h4>Experiencia de Cliente</h4><p>Cuida el recorrido de punta a punta y convierte lo que dice el cliente en acciones de mejora.</p>
+        <div class="a-tags"><span>Journeys</span><span>Fricciones</span><span>Voz del cliente</span></div>
       </div>
       <div class="actor reveal d2" data-group="exp">
         <div class="a-top"><span class="a-num">7</span><span class="a-ic"><svg viewBox="0 0 24 24"><path d="M3 11l14-5v12L3 13v-2z"/><path d="M17 8a4 4 0 0 1 0 8M7 13v5a2 2 0 0 0 4 0v-4"/></svg></span></div>
-        <h4>Mercadeo Estratégico y Activos Digitales</h4><p>Activación, conversión y presencia digital.</p>
-        <div class="a-g">Experiencia y activación</div>
+        <h4>Mercadeo Estratégico y Activos Digitales</h4><p>Convierte la oferta conjunta en campañas, contenidos y experiencias digitales que generan demanda.</p>
+        <div class="a-tags"><span>Posicionamiento</span><span>Activación</span><span>Conversión</span></div>
       </div>
       <div class="actor reveal d3" data-group="exp">
         <div class="a-top"><span class="a-num">8</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 11l10-4M7 13l10 4"/></svg></span></div>
-        <h4>Visión Cliente y MarTech</h4><p>Segmentación, medición y estrategia.</p>
-        <div class="a-g">Experiencia y activación</div>
+        <h4>Visión Cliente y MarTech</h4><p>Integra los datos de Alfa y Cardif para conocer al cliente, personalizar interacciones y medir el impacto en el negocio.</p>
+        <div class="a-tags"><span>Conocimiento</span><span>Personalización</span><span>Medición</span></div>
       </div>
       <div class="actor reveal d4" data-group="imp">
         <div class="a-top"><span class="a-num">9</span><span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span></div>
-        <h4>Transformación</h4><p>Integración e implementación de productos y activos digitales.</p>
-        <div class="a-g">Implementación y capacidades</div>
+        <h4>Transformación</h4><p>Convierte los diseños en realidad: coordina desarrollos y lleva productos y activos digitales a producción.</p>
+        <div class="a-tags"><span>Integración</span><span>Implementación</span></div>
       </div>
       <div class="actor reveal d5" data-group="imp">
         <div class="a-top"><span class="a-num">10</span><span class="a-ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></span></div>
-        <h4>Tecnología y Analítica</h4><p>Desarrollo y provisión de datos.</p>
-        <div class="a-g">Implementación y capacidades</div>
+        <h4>Tecnología y Analítica</h4><p>Construye la base tecnológica y disponibiliza los datos que alimentan las decisiones de todos los frentes.</p>
+        <div class="a-tags"><span>Desarrollo</span><span>Provisión de datos</span></div>
       </div>
     </div>
     <div class="ma-note reveal">
-      <b>S/P — Suscripción y Producto</b> — consolida Obligatorios, Técnica, Operaciones y viabilidad financiera. Los <b>bancos del Grupo Aval y los proveedores o aliados</b> participan como canal y cocreadores; su interlocución la lideran las Gerencias Comerciales.
+      <b>Oferta de Valor acompaña la construcción de la estrategia y el método.</b> Las áreas y los aliados aportan sus capacidades para hacer posible la ejecución.
     </div>
   </div>
 </section>
